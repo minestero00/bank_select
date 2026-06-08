@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0010001_WR0003M",
+    "bank": "우리은행",
+    "bankCode": "0010001",
+    "productName": "우리 아파트론",
+    "productType": "mortgage",
+    "baseRate": 3.8,
+    "maxRate": 5.2,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline", "online"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  },
+  {
+    "id": "0010927_KB0003M",
+    "bank": "KB국민은행",
+    "bankCode": "0010927",
+    "productName": "KB 주택담보대출",
+    "productType": "mortgage",
+    "baseRate": 3.6,
+    "maxRate": 5.0,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline", "online"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  },
+  {
+    "id": "0011625_SH0003M",
+    "bank": "신한은행",
+    "bankCode": "0011625",
+    "productName": "신한 주택구입자금대출",
+    "productType": "mortgage",
+    "baseRate": 3.7,
+    "maxRate": 5.1,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  }
+]

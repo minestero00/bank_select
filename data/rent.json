@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0010001_WR0004R",
+    "bank": "우리은행",
+    "bankCode": "0010001",
+    "productName": "우리 전세론",
+    "productType": "rent",
+    "baseRate": 3.3,
+    "maxRate": 4.5,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline", "online"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  },
+  {
+    "id": "0010927_KB0004R",
+    "bank": "KB국민은행",
+    "bankCode": "0010927",
+    "productName": "KB 전세자금대출",
+    "productType": "rent",
+    "baseRate": 3.1,
+    "maxRate": 4.3,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline", "online"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  },
+  {
+    "id": "0010016_HN0004R",
+    "bank": "하나은행",
+    "bankCode": "0010016",
+    "productName": "하나 전세자금대출",
+    "productType": "rent",
+    "baseRate": 3.2,
+    "maxRate": 4.4,
+    "preferentialConditions": [],
+    "minAmount": 0,
+    "maxAmount": null,
+    "termMonths": [],
+    "joinMethod": ["offline"],
+    "lastUpdated": "2026-06-08T00:00:00.000Z",
+    "sourceUrl": "https://finlife.fss.or.kr"
+  }
+]
