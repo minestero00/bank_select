@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "fetch-data": "node --env-file=.env.local --import=tsx scripts/fetch-fss.ts"
+    "fetch-data": "node --env-file=.env.local --import=tsx scripts/fetch-fss.ts",
+    "crawl-events": "node --env-file=.env.local --import=tsx scripts/crawl-events.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

@@ -48,6 +48,11 @@ export function ProductCard({ result, rank }: Props) {
             >
               {TYPE_LABEL[product.productType]}
             </span>
+            {product.isEvent && (
+              <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
+                ⚡ 특판
+              </span>
+            )}
           </div>
           <h3 className="font-bold text-lg leading-tight">{product.productName}</h3>
           <p className="text-sm text-muted-foreground mt-0.5">{product.bank}</p>
@@ -127,14 +132,41 @@ export function ProductCard({ result, rank }: Props) {
         </div>
       )}
 
-      {/* 가입 방법 */}
-      <div className="mt-3 flex items-center gap-2">
-        <span className="text-xs text-muted-foreground">가입 방법</span>
-        {product.joinMethod.map((m) => (
-          <Badge key={m} variant="secondary" className="text-xs">
-            {m === "online" ? "인터넷" : m === "app" ? "앱" : "영업점"}
-          </Badge>
-        ))}
+      {/* 이벤트 정보 */}
+      {product.isEvent && (
+        <div className="mt-3 p-3 rounded-xl bg-amber-50 border border-amber-200 dark:bg-amber-900/20 dark:border-amber-700/40">
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className="text-xs font-bold text-amber-700 dark:text-amber-400">⚡ 이벤트·특판</span>
+            {product.eventPeriod && (
+              <span className="text-xs text-amber-600 dark:text-amber-500">{product.eventPeriod}</span>
+            )}
+          </div>
+          {product.highlight && (
+            <p className="text-xs text-amber-700 dark:text-amber-300">{product.highlight}</p>
+          )}
+        </div>
+      )}
+
+      {/* 가입 방법 + 공식 사이트 */}
+      <div className="mt-3 flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-muted-foreground">가입 방법</span>
+          {product.joinMethod.map((m) => (
+            <Badge key={m} variant="secondary" className="text-xs">
+              {m === "online" ? "인터넷" : m === "app" ? "앱" : "영업점"}
+            </Badge>
+          ))}
+        </div>
+        {product.sourceUrl && (
+          <a
+            href={product.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium text-primary hover:underline underline-offset-2 shrink-0"
+          >
+            실제 금리 확인 →
+          </a>
+        )}
       </div>
     </div>
   );

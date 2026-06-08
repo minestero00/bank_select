@@ -47,6 +47,9 @@ export interface BankProduct {
   joinMethod: ("online" | "offline" | "app")[];
   lastUpdated: string;
   sourceUrl: string;
+  isEvent?: boolean;
+  eventPeriod?: string;
+  highlight?: string;
 }
 
 export interface RecommendationResult {

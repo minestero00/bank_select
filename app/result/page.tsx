@@ -11,8 +11,10 @@ import depositData from "@/data/deposit.json";
 import savingsData from "@/data/savings.json";
 import mortgageData from "@/data/mortgage.json";
 import rentData from "@/data/rent.json";
+import eventsData from "@/data/events.json";
 
 const ALL_PRODUCTS = [
+  ...(eventsData as BankProduct[]),  // 이벤트·특판 상품 우선
   ...(depositData as BankProduct[]),
   ...(savingsData as BankProduct[]),
   ...(mortgageData as BankProduct[]),
