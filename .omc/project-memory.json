@@ -1,0 +1,226 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780921593947,
+  "projectRoot": "/Users/riaco/code/bankSelect",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "16.2.7",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "19.2.4",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.4",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build 2>&1",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint",
+      "fetch-data": "node --env-file=.env.local --import=tsx scripts/fetch-fss.ts",
+      "crawl-events": "node --env-file=.env.local --import=tsx scripts/crawl-events.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": "camelCase",
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "components",
+      "lib",
+      "public",
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1780921593933,
+      "keyFiles": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "components": {
+      "path": "components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1780921593933,
+      "keyFiles": []
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 6,
+      "lastAccessed": 1780921593935,
+      "keyFiles": [
+        "deposit.json",
+        "events.json",
+        "meta.json",
+        "mortgage.json",
+        "rent.json"
+      ]
+    },
+    "doc": {
+      "path": "doc",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1780921593936,
+      "keyFiles": [
+        "IDEA.md",
+        "PLAN.md"
+      ]
+    },
+    "lib": {
+      "path": "lib",
+      "purpose": "Library code",
+      "fileCount": 3,
+      "lastAccessed": 1780921593936,
+      "keyFiles": [
+        "recommend.ts",
+        "types.ts",
+        "utils.ts"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 5,
+      "lastAccessed": 1780921593936,
+      "keyFiles": [
+        "file.svg",
+        "globe.svg",
+        "next.svg",
+        "vercel.svg",
+        "window.svg"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 3,
+      "lastAccessed": 1780921593936,
+      "keyFiles": [
+        "crawl-events.ts",
+        "fetch-fss.ts",
+        "types.ts"
+      ]
+    },
+    "public/data": {
+      "path": "public/data",
+      "purpose": "Data files",
+      "fileCount": 0,
+      "lastAccessed": 1780921593937,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "app/page.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1780921849836,
+      "type": "file"
+    },
+    {
+      "path": "components/result/ProductCard.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1780921794794,
+      "type": "file"
+    },
+    {
+      "path": "lib/recommend.ts",
+      "accessCount": 3,
+      "lastAccessed": 1780921766298,
+      "type": "file"
+    },
+    {
+      "path": "components/survey/Step2Goal.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1780921780121,
+      "type": "file"
+    },
+    {
+      "path": "app/result/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780921786679,
+      "type": "file"
+    },
+    {
+      "path": "next.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780922590208,
+      "type": "file"
+    },
+    {
+      "path": "app/survey/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780921673931,
+      "type": "file"
+    },
+    {
+      "path": "lib/types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780921687901,
+      "type": "file"
+    },
+    {
+      "path": "data/parking.json",
+      "accessCount": 1,
+      "lastAccessed": 1780921706296,
+      "type": "file"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780921822161,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

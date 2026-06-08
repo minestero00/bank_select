@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"git add -A -- ':!.env' ':!.env.local' && git status\",\"description\":\"Stage all files except .env files\"}",
-  "error": "Exit code 1\n다음 경로는 .gitignore 파일 중 하나 때문에 무시합니다:\n.env\n.env.local\nhint: Use -f if you really want to add them.\nhint: Disable this message with \"git config set advice.addIgnoredFile false\"",
-  "timestamp": "2026-06-08T11:58:59.044Z",
-  "retry_count": 1
-}
