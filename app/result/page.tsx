@@ -12,9 +12,11 @@ import savingsData from "@/data/savings.json";
 import mortgageData from "@/data/mortgage.json";
 import rentData from "@/data/rent.json";
 import eventsData from "@/data/events.json";
+import parkingData from "@/data/parking.json";
 
 const ALL_PRODUCTS = [
   ...(eventsData as BankProduct[]),  // 이벤트·특판 상품 우선
+  ...(parkingData as BankProduct[]),
   ...(depositData as BankProduct[]),
   ...(savingsData as BankProduct[]),
   ...(mortgageData as BankProduct[]),
@@ -27,6 +29,7 @@ const GOAL_LABEL: Record<string, string> = {
   home: "내 집 마련",
   loan_repay: "대출 갈아타기",
   retirement: "노후 준비",
+  emergency_fund: "비상금 굴리기",
 };
 
 function ResultContent() {

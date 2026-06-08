@@ -136,6 +136,11 @@ function buildReasons(product: BankProduct, profile: UserProfile, scores: number
 
 function estimateReturn(product: BankProduct, profile: UserProfile): number | null {
   if (product.productType === "mortgage" || product.productType === "rent") return null;
+  if (product.productType === "parking") {
+    const principal = profile.cashAsset * 10000;
+    const rate = product.maxRate / 100;
+    return Math.round(principal * rate);
+  }
   const { min, max } = getGoalTermMonths(profile.goalPeriod);
   const termMonths = product.termMonths.find((t) => t >= min && t <= max) ?? product.termMonths[0];
   if (!termMonths) return null;
@@ -159,6 +164,9 @@ export function getTopRecommendations(
 ): RecommendationResult[] {
   const eligible = allProducts.filter((p) => {
     if (p.minAmount > profile.cashAsset * 10000) return false;
+    if (profile.mainGoal === "emergency_fund") {
+      return p.productType === "parking";
+    }
     if (profile.mainGoal === "savings" || profile.mainGoal === "investment") {
       return p.productType === "deposit" || p.productType === "savings";
     }
@@ -168,7 +176,7 @@ export function getTopRecommendations(
     if (profile.mainGoal === "loan_repay") {
       return p.productType === "mortgage" || p.productType === "rent";
     }
-    return true;
+    return p.productType !== "parking";
   });
 
   const scored = eligible.map((product) => {

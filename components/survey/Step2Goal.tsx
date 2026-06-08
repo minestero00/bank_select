@@ -9,12 +9,13 @@ interface Props {
   update: (p: Partial<UserProfile>) => void;
 }
 
-const GOALS: { value: GoalType; label: string; emoji: string }[] = [
+const GOALS: { value: GoalType; label: string; emoji: string; desc?: string }[] = [
   { value: "savings", label: "저축·자산 증식", emoji: "💰" },
   { value: "investment", label: "투자 수익 실현", emoji: "📈" },
   { value: "home", label: "내 집 마련", emoji: "🏠" },
   { value: "loan_repay", label: "대출 상환·갈아타기", emoji: "💳" },
   { value: "retirement", label: "노후 준비", emoji: "🌅" },
+  { value: "emergency_fund", label: "비상금 굴리기", emoji: "🏦", desc: "자유 입출금 파킹통장 추천" },
 ];
 
 const PERIODS: { value: GoalPeriod; label: string; sub: string }[] = [
@@ -47,7 +48,10 @@ export function Step2Goal({ profile, update }: Props) {
                 }`}
               >
                 <span className="text-2xl">{g.emoji}</span>
-                <span className="font-medium text-sm">{g.label}</span>
+                <span className="flex-1">
+                  <span className="font-medium text-sm block">{g.label}</span>
+                  {g.desc && <span className="text-xs text-muted-foreground">{g.desc}</span>}
+                </span>
                 {profile.mainGoal === g.value && (
                   <span className="ml-auto text-primary text-sm">✓</span>
                 )}

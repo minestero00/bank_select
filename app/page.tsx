@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const FEATURES = [
@@ -46,12 +46,12 @@ export default function HomePage() {
             나에게 가장 유리한 Top 3를 5분 만에 추천해드립니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg" className="text-base px-8">
-              <Link href="/survey">지금 추천받기 →</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="text-base px-8">
-              <Link href="#features">서비스 알아보기</Link>
-            </Button>
+            <Link href="/survey" className={buttonVariants({ size: "lg", className: "text-base px-8" })}>
+              지금 추천받기 →
+            </Link>
+            <Link href="#features" className={buttonVariants({ variant: "outline", size: "lg", className: "text-base px-8" })}>
+              서비스 알아보기
+            </Link>
           </div>
         </div>
       </section>
@@ -105,9 +105,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="text-base px-10">
-              <Link href="/survey">무료로 시작하기</Link>
-            </Button>
+            <Link href="/survey" className={buttonVariants({ size: "lg", className: "text-base px-10" })}>
+              무료로 시작하기
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
-export type ProductType = "deposit" | "savings" | "mortgage" | "rent";
-export type GoalType = "savings" | "investment" | "loan_repay" | "home" | "retirement";
+export type ProductType = "deposit" | "savings" | "mortgage" | "rent" | "parking";
+export type GoalType = "savings" | "investment" | "loan_repay" | "home" | "retirement" | "emergency_fund";
 export type GoalPeriod = "short" | "mid" | "long";
 export type JobType = "employee" | "self_employed" | "freelancer" | "student" | "homemaker" | "retired";
 export type RiskType = "stable" | "stable_seeking" | "neutral" | "aggressive";

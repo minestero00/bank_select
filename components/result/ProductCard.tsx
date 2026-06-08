@@ -13,6 +13,7 @@ const TYPE_LABEL: Record<string, string> = {
   savings: "정기적금",
   mortgage: "주택담보대출",
   rent: "전세자금대출",
+  parking: "파킹통장",
 };
 
 const TYPE_COLOR: Record<string, string> = {
@@ -20,6 +21,7 @@ const TYPE_COLOR: Record<string, string> = {
   savings: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
   mortgage: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
   rent: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
+  parking: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
 };
 
 const RANK_STYLE = [
@@ -33,6 +35,7 @@ const RANK_LABEL = ["🥇 1위", "🥈 2위", "🥉 3위"];
 export function ProductCard({ result, rank }: Props) {
   const { product, score, reasons, estimatedReturn, meetsPreferentialConditions } = result;
   const isLoan = product.productType === "mortgage" || product.productType === "rent";
+  const isParking = product.productType === "parking";
 
   return (
     <div
@@ -59,10 +62,10 @@ export function ProductCard({ result, rank }: Props) {
         </div>
         <div className="text-right shrink-0">
           <p className="text-2xl font-bold text-primary">
-            {isLoan ? product.baseRate.toFixed(1) : product.maxRate.toFixed(1)}%
+            {isLoan ? product.baseRate.toFixed(1) : product.maxRate.toFixed(2)}%
           </p>
           <p className="text-xs text-muted-foreground">
-            {isLoan ? "최저 금리" : "최고 금리"}
+            {isLoan ? "최저 금리" : isParking ? "연 금리" : "최고 금리"}
           </p>
         </div>
       </div>
@@ -84,7 +87,16 @@ export function ProductCard({ result, rank }: Props) {
       </div>
 
       {/* 가입 기간 */}
-      {product.termMonths.length > 0 && (
+      {isParking ? (
+        <div className="flex gap-1.5 flex-wrap mb-3">
+          <Badge variant="outline" className="text-xs text-teal-700 border-teal-300 dark:text-teal-300">
+            자유 입출금
+          </Badge>
+          <Badge variant="outline" className="text-xs">
+            만기 없음
+          </Badge>
+        </div>
+      ) : product.termMonths.length > 0 ? (
         <div className="flex gap-1.5 flex-wrap mb-3">
           <span className="text-xs text-muted-foreground self-center">기간</span>
           {product.termMonths.map((m) => (
@@ -93,12 +105,14 @@ export function ProductCard({ result, rank }: Props) {
             </Badge>
           ))}
         </div>
-      )}
+      ) : null}
 
       {/* 예상 이자 */}
       {estimatedReturn !== null && (
         <div className="p-3 rounded-xl bg-primary/5 border border-primary/20 mb-4">
-          <p className="text-xs text-muted-foreground mb-0.5">예상 이자 수익 (세전)</p>
+          <p className="text-xs text-muted-foreground mb-0.5">
+            {isParking ? "연간 예상 이자 (세전)" : "예상 이자 수익 (세전)"}
+          </p>
           <p className="font-bold text-primary">
             약 {estimatedReturn.toLocaleString()}원
           </p>
