@@ -4,8 +4,12 @@ which one is your best one?
 
 ### data
 - [finlife.fss.or.kr](finlife.fss.or.kr)
+    - github cron at 14:00(KST)
 - [data.fss.or.kr](data.fss.or.kr)
 - bank crawling
+
+
+
 ## Getting Started
 
 ```bash
