@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1780921593947,
+  "lastScanned": 1781082278101,
   "projectRoot": "/Users/riaco/code/bankSelect",
   "techStack": {
     "languages": [
@@ -42,7 +42,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "npm run build 2>&1",
+    "buildCommand": "npm run build",
     "testCommand": null,
     "lintCommand": "npm run lint",
     "devCommand": "npm run dev",
@@ -79,7 +79,7 @@
       "path": "app",
       "purpose": "Application code",
       "fileCount": 4,
-      "lastAccessed": 1780921593933,
+      "lastAccessed": 1781082278094,
       "keyFiles": [
         "favicon.ico",
         "globals.css",
@@ -91,27 +91,27 @@
       "path": "components",
       "purpose": "UI components",
       "fileCount": 0,
-      "lastAccessed": 1780921593933,
+      "lastAccessed": 1781082278094,
       "keyFiles": []
     },
     "data": {
       "path": "data",
       "purpose": "Data files",
-      "fileCount": 6,
-      "lastAccessed": 1780921593935,
+      "fileCount": 7,
+      "lastAccessed": 1781082278096,
       "keyFiles": [
         "deposit.json",
         "events.json",
         "meta.json",
         "mortgage.json",
-        "rent.json"
+        "parking.json"
       ]
     },
     "doc": {
       "path": "doc",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1780921593936,
+      "lastAccessed": 1781082278096,
       "keyFiles": [
         "IDEA.md",
         "PLAN.md"
@@ -121,18 +121,31 @@
       "path": "lib",
       "purpose": "Library code",
       "fileCount": 3,
-      "lastAccessed": 1780921593936,
+      "lastAccessed": 1781082278096,
       "keyFiles": [
         "recommend.ts",
         "types.ts",
         "utils.ts"
       ]
     },
+    "out": {
+      "path": "out",
+      "purpose": "Build output",
+      "fileCount": 20,
+      "lastAccessed": 1781082278097,
+      "keyFiles": [
+        "404.html",
+        "__next.__PAGE__.txt",
+        "__next._full.txt",
+        "__next._head.txt",
+        "__next._index.txt"
+      ]
+    },
     "public": {
       "path": "public",
       "purpose": "Public files",
       "fileCount": 5,
-      "lastAccessed": 1780921593936,
+      "lastAccessed": 1781082278097,
       "keyFiles": [
         "file.svg",
         "globe.svg",
@@ -145,7 +158,7 @@
       "path": "scripts",
       "purpose": "Build/utility scripts",
       "fileCount": 3,
-      "lastAccessed": 1780921593936,
+      "lastAccessed": 1781082278097,
       "keyFiles": [
         "crawl-events.ts",
         "fetch-fss.ts",
@@ -156,7 +169,7 @@
       "path": "public/data",
       "purpose": "Data files",
       "fileCount": 0,
-      "lastAccessed": 1780921593937,
+      "lastAccessed": 1781082278097,
       "keyFiles": []
     }
   },
@@ -219,6 +232,18 @@
       "path": "components/ui/button.tsx",
       "accessCount": 1,
       "lastAccessed": 1780921822161,
+      "type": "file"
+    },
+    {
+      "path": "scripts/fetch-fss.ts",
+      "accessCount": 1,
+      "lastAccessed": 1781082296833,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1781082297262,
       "type": "file"
     }
   ],
