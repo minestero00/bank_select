@@ -45,7 +45,11 @@ async function fetchAllPages<T>(endpoint: string): Promise<T[]> {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status} for ${endpoint}`);
 
-    const json = (await res.json()) as FssApiResponse<T>;
+    const text = await res.text();
+    if (!text.trim().startsWith("{")) {
+      throw new Error(`Non-JSON response from ${endpoint}: ${text.slice(0, 300)}`);
+    }
+    const json = JSON.parse(text) as FssApiResponse<T>;
     const result = json.result;
 
     if (result.err_cd !== "000") {
