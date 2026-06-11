@@ -42,7 +42,9 @@ async function fetchAllPages<T>(endpoint: string): Promise<T[]> {
 
   do {
     const url = `${BASE_URL}/${endpoint}?auth=${API_KEY}&topFinGrpNo=${FIN_GRP_NO}&pageNo=${pageNo}`;
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; BankSelect/1.0)" },
+    });
     if (!res.ok) throw new Error(`HTTP ${res.status} for ${endpoint}`);
 
     const text = await res.text();
